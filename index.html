@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecom product page </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Kumbh+Sans:300,400,600,700&amp;lang=en" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="logo">sneakers</div>
+
+            <ul class="nav-links">
+                <li>collections</li>
+                <li>men</li>
+                <li>women</li>
+                <li>about</li>
+                <li>contact</li>
+            </ul>
+
+            <!--<div class="toggle">
+                <div class="bar">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                
+            </div>-->
+
+            <div class="cart" id="cart">
+                <img src="images/icon-cart.svg" alt="">
+                <span class="counter">0</span>
+            </div>
+
+            
+            
+
+            <div class="profile_img">
+                <img src="images/image-avatar.png" alt="" class="image">
+            </div>
+        </nav>
+        <div class="nav_line"></div>
+    </header>
+
+    <main>
+        <div class="image_grid">
+            <div class="product-image">
+                <img id="myImg" class="product1-image" src="./images/image-product-1.jpg" alt="product-1"/>
+
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+                      <span class="close">&times;</span>
+                      <div class="modal-content">
+                        <div class="next-pre" onClick="preClicked()" style="height:40px;width:40px"> <img class="next-pre-image" height="20px" width="20px" src="images/icon-previous.svg"/></div>
+                        <img class="center-image" id="img00">
+                        <div class="next-pre" onClick="nextClicked()" style="height:40px;width:40px"> <img class="next-pre-image" height="20px" width="20px" src="images/icon-next.svg"/> </div>
+                      </div>
+                      <div class="other-images-section-preview">
+                            <img id="img-11" tabindex="0" onClick="changeMainImg(this.id)" class="other-image" src="./images/image-product-1.jpg" alt="image-1"/>
+                            <img id="img-22" tabindex="0" onClick="changeMainImg(this.id)" class="other-image" src="./images/image-product-2.jpg" alt="image-2"/>
+                            <img id="img-33" tabindex="0" onClick="changeMainImg(this.id)" class="other-image" src="./images/image-product-3.jpg" alt="image-3"/>
+                            <img id="img-44" tabindex="0" onClick="changeMainImg(this.id)" class="other-image" src="./images/image-product-4.jpg" alt="image-4"/>
+                        </div>
+                    </div>
+                <div class="other-images-section-index">
+                    <img id="img-1" tabindex="0" onClick="changeMainImg(this.id)" class="other-image selected" src="./images/image-product-1.jpg" alt="image-1"/>
+                    <img id="img-2" tabindex="0" onClick="changeMainImg(this.id)" class="other-image" src="./images/image-product-2.jpg" alt="image-2"/>
+                    <img id="img-3" tabindex="0" onClick="changeMainImg(this.id)" class="other-image" src="./images/image-product-3.jpg" alt="image-3"/>
+                    <img id="img-4" tabindex="0" onClick="changeMainImg(this.id)" class="other-image" src="./images/image-product-4.jpg" alt="image-4"/>
+                </div>
+                <div class="close">X</div>
+            </div>
+        </div>
+
+        <div class="info_grid">
+            <h4 class="info_grid_header">sneaker company</h4>
+            <h2 class="info_grid_motto">fall limited edition <br>sneakers</h2>
+            <span class="info_grid_desc">These low-profile sneakers are your perfect casual wear companion. featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</span>
+            <h3 class="info_grid_price">$125.00</h3>
+            <span class="discount">50%</span>
+            <h3 class="discount_price">$250.00</h3>
+            <span class="counter-up-down">
+                <img src="images/icon-minus.svg" alt="" class="reduce">
+                <i class="number">0</i>
+                <img src="images/icon-plus.svg" alt="" class="increase">
+            </span>
+            <button class="add_to_cart">
+                <img class="add_to_cart_icon" src="images/icon-cart.svg" alt="">
+                Add to  cart 
+            </button>
+        </div>
+
+
+        <div class="cart-modal">
+            <div class="carthead">
+                <p>Cart</p>
+            </div>
+            <div class="cartempty">
+                <p>YOUR CART IS EMPTY</p>
+            </div>
+            <div class="cartinfo">
+                <div class="cartdetails  cart-details-display">
+                    <div class="thumbnail"></div>
+                    <div class="info">
+                        <p class="cart_card_p">fall limited edition sneakers</p>
+                        <p>$<span class="amount">125</span> x <span class="itemsPicked"></span> <span class="space">$<span class="totalprice"></span></span></p>
+                    </div>
+                    <div class="delete"><img src="./images/icon-delete.svg" alt=""></div>
+                    <button class="checkout">checkout</button>
+                </div>
+                
+            </div>
+            <!-- <div class="submit-cart">Checkout</div> -->
+            
+        
+
+        </div> 
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
