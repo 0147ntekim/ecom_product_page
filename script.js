@@ -1,3 +1,23 @@
+const hamburger= document.querySelector('.hamburger')
+const closeIcon = document.querySelector('.close-icon')
+const navLink =document.querySelector('.nav-links')
+
+hamburger.addEventListener('click', showHamburger)
+closeIcon.addEventListener('click', closeIcons)
+
+
+function showHamburger(){
+    hamburger.classList.add('remove-hamburger')
+    navLink.classList.add('reveal-link-container')
+}
+function closeIcons(){
+    hamburger.classList.remove('remove-hamburger')
+   
+ 
+    navLink.classList.remove('reveal-link-container')
+}
+
+
 $.noConflict();
 $(function() {
 	
@@ -250,3 +270,4 @@ function cartRemove(e) {
    
 
 }
+
