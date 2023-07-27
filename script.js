@@ -1,23 +1,3 @@
-const hamburger= document.querySelector('.hamburger')
-const closeIcon = document.querySelector('.close-icon')
-const navLink =document.querySelector('.nav-links')
-
-hamburger.addEventListener('click', showHamburger)
-closeIcon.addEventListener('click', closeIcons)
-
-
-function showHamburger(){
-    hamburger.classList.add('remove-hamburger')
-    navLink.classList.add('reveal-link-container')
-}
-function closeIcons(){
-    hamburger.classList.remove('remove-hamburger')
-   
- 
-    navLink.classList.remove('reveal-link-container')
-}
-
-
 $.noConflict();
 $(function() {
 	
@@ -271,3 +251,23 @@ function cartRemove(e) {
 
 }
 
+
+const closeNav = document.querySelector('.close-icon')
+const hamburger = document.querySelector('.hamburger')
+const navMenu=document.querySelector('.nav-links')
+
+
+hamburger.addEventListener('click', openNav)
+closeNav.addEventListener('click', closeNavBar)
+
+function openNav(){
+    closeNav.classList.add('open-nav')
+    hamburger.classList.add('close-hamburger')
+    navMenu.classList.add('open-mobile-nav')
+}
+
+function closeNavBar(){
+    hamburger.classList.remove('close-hamburger')
+    closeNav.classList.remove('open-nav')
+    navMenu.classList.remove('open-mobile-nav')
+}

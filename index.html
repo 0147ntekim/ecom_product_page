@@ -27,10 +27,12 @@
                 <li>women</li>
                 <li>about</li>
                 <li>contact</li>
-                <div class="close-icon">
-                    <img src="./images/icon-close.svg" alt="">
-                </div>
+
+            <div class="close-icon">
+                <img src="./images/icon-close.svg" alt="">
+            </div>
             </ul>
+           
             
             
 
@@ -49,15 +51,15 @@
     <main>
         <div class="image_grid">
             <div class="product-image">
-                <img id="myImg" class="product1-image" src="./images/image-product-1.jpg" alt="product-1"/>
+                <img id="myImg" class="product1-image "  onClick="changeMainImg(this.id)" src="./images/image-product-1.jpg" alt="product-1"/>
 
                     <!-- The Modal -->
                     <div id="myModal" class="modal">
                       <span class="close">&times;</span>
                       <div class="modal-content">
-                        <div class="next-pre" onClick="preClicked()" style="height:40px;width:40px"> <img class="next-pre-image" height="20px" width="20px" src="images/icon-previous.svg"/></div>
+                        <div class="next-pre arrowbackward" onClick="preClicked()" style="height:40px;width:40px"> <img class="next-pre-image" height="20px" width="20px" src="images/icon-previous.svg"/></div>
                         <img class="center-image" id="img00">
-                        <div class="next-pre" onClick="nextClicked()" style="height:40px;width:40px"> <img class="next-pre-image" height="20px" width="20px" src="images/icon-next.svg"/> </div>
+                        <div class="next-pre arrow-forward" onClick="nextClicked()" style="height:40px;width:40px"> <img class="next-pre-image" height="20px" width="20px" src="images/icon-next.svg"/> </div>
                       </div>
                       <div class="other-images-section-preview">
                             <img id="img-11" tabindex="0" onClick="changeMainImg(this.id)" class="other-image" src="./images/image-product-1.jpg" alt="image-1"/>
@@ -66,8 +68,8 @@
                             <img id="img-44" tabindex="0" onClick="changeMainImg(this.id)" class="other-image" src="./images/image-product-4.jpg" alt="image-4"/>
                         </div>
                     </div>
-                <div class="other-images-section-index">
-                    <img id="img-1" tabindex="0" onClick="changeMainImg(this.id)" class="other-image selected" src="./images/image-product-1.jpg" alt="image-1"/>
+                <div class="other-images-section-index ">
+                    <img id="img-1" tabindex="0" onClick="changeMainImg(this.id)" class="other-image selected empty" src="./images/image-product-1.jpg" alt="image-1"/>
                     <img id="img-2" tabindex="0" onClick="changeMainImg(this.id)" class="other-image" src="./images/image-product-2.jpg" alt="image-2"/>
                     <img id="img-3" tabindex="0" onClick="changeMainImg(this.id)" class="other-image" src="./images/image-product-3.jpg" alt="image-3"/>
                     <img id="img-4" tabindex="0" onClick="changeMainImg(this.id)" class="other-image" src="./images/image-product-4.jpg" alt="image-4"/>
@@ -113,7 +115,8 @@
                         <p class="cart_card_p">fall limited edition sneakers</p>
                         <p>$<span class="amount">125</span> x <span class="itemsPicked"></span> <span class="space">$<span class="totalprice"></span></span></p>
                         <div class="delete"><img src="images/icon-delete.svg" alt=""></div>
-                        <button class="checkout">checkout</button>
+                        <div class="checkout"><button >checkout</button></div>
+                        
                     </div>
                     
                 </div>
@@ -124,11 +127,11 @@
     </main>
     <section class="mobile">
          
-        <div class="arrow-mobile-slide">
-            <div class="arrow-forward">
+        <div class="arrow-mobile-slide" >
+            <div class="arrow-forward" onClick="nextClicked()">
                 <img src="./images/icon-next.svg" alt="">
             </div>
-            <div class="arrowbackward">
+            <div class="arrowbackward" onClick="preClicked()">
                 <img src="./images/icon-previous.svg" alt="">
             
             </div>
