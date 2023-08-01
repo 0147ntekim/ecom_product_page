@@ -613,15 +613,13 @@ dialog{
 }
 
 .close-icon {
-    display: grid;
-    place-items: center;
     display: none;
 }
 
 
 
 
-@media (max-width: 375px), (max-width: 768px) {
+@media only screen and (max-width: 375px), (max-width: 768px) {
     @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:ital@0;1&family=Kumbh+Sans:wght@600&family=Montserrat:wght@200&display=swap');
     *{
         margin: 0;
@@ -650,15 +648,15 @@ dialog{
         flex-direction: column;
         position: absolute;
         background-color: white;
-        left: 0;
+        left: -600%;
         right: 0;
         top: 0;
         height: 100%;
 
-        display: none;
+        display: block;
     
         z-index: 2000;
-        width: 50%;
+        width: 70%;
     }
 
     .nav-links  li{
@@ -741,7 +739,7 @@ dialog{
 
     main{
         width: 100%;
-        height: 100vh;
+        height: 100%;
         padding-top: 0;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -754,7 +752,7 @@ dialog{
     
     .image_grid{
         width: 100%;
-        height: 70vh;
+        height: 50vh;
         grid-area: "image_grid";
     
         display: flex;
@@ -830,7 +828,7 @@ dialog{
     }
 
     .close-hamburger {
-        display: none;
+        display: block;
         left:-10%;
     }
 
@@ -841,7 +839,7 @@ dialog{
 
     .info_grid{
         width: 100%;
-        height: 70vh;
+        height: 60vh;
         grid-area: info_grid;
         
         
@@ -865,7 +863,7 @@ dialog{
     
         position: relative;
         right: 15%;
-        bottom: 10%;
+        bottom: 25%;
     }
     
    .info_grid_motto{
@@ -876,7 +874,7 @@ dialog{
         text-transform: capitalize;
     
         position: relative;
-        top: -5%;
+        top: -15%;
         right: 15%;
         
     }
@@ -890,20 +888,20 @@ dialog{
         color: hsl(219, 9%, 45%);
     
         position: relative;
-        top: 10px;
+        top: -20px;
         right: 15%;
         
     }
     
    .info_grid_price{
-        width: 20%;
+        width: 40%;
         font-size: 25px;
         font-weight: 900;
         font-family: 'Kumbh Sans', sans-serif;
     
         position: relative;
         top: 28px;
-        right: 55%;
+        right: 45%;
     }
     
      .discount{
@@ -918,7 +916,7 @@ dialog{
     
         position: relative;
         bottom: 0;
-        left: -20%;
+        left: -10%;
     }
     
     .discount_price{
